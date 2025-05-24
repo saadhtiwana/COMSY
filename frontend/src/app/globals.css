@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Fonts */
+@font-face {
+  font-family: HelvR;
+  src: url("../../public/fonts/HelveticaNowDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: HelvM;
+  src: url("../../public/fonts/HelveticaNowDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: HelvB;
+  src: url("../../public/fonts/HelveticaNowDispBd.ttf");
+}
+.HelvR{
+  font-family: HelvR !important;
+}
+.HelvM{
+  font-family: HelvM !important;
+}
+.HelvB{
+  font-family: HelvB !important;
+}
+/* Pre Loader */
+.preLoader svg path,
+.preLoader svg rect{
+  fill: #6366F1;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.svg-rotate {
+  animation: rotate 0.6s linear infinite;
+}
+/* Scrollbars hidden */
+.rightBar::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar,
+.scrollbar-hide::-webkit-scrollbar,
+.mini-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar,
+.rightBar,
+.scrollbar-hide,
+.mini-sidebar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
