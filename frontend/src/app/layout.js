@@ -2,8 +2,8 @@ import RootLayoutClient from "@/components/RootLayoutClient";
 import "./globals.css";
 
 export const metadata = {
-  title: "Social Networking Site - Abdul Rehman",
-  description: "Social networking site by Abdul Rehman in NextJs, MERN STACK",
+  title: "comsy",
+  description: "Social networking site for COMSians",
 };
 
 export default function RootLayout({ children }) {

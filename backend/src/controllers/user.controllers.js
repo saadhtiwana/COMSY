@@ -8,6 +8,12 @@ import { ApiResponse } from '../utils/ApiResponse.js';
 import { FriendRequest } from '../models/friendRequests.model.js';
 import mongoose from 'mongoose';
 
+// Function to validate COMSATS student email format
+const isValidComsatsEmail = (email) => {
+  const emailRegex = /^fa\d{2}-[a-z]{2,4}-\d{3}@isbstudent\.comsats\.edu\.pk$/i;
+  return emailRegex.test(email);
+};
+
 const profilePictures = [
   "https://res.cloudinary.com/datvbo0ey/image/upload/v1726651745/3d%20avatar/1_ijpza2.png",
   "https://img.freepik.com/premium-photo/3d-avatar-boy-character_914455-603.jpg",
@@ -37,6 +43,19 @@ const coverImages = [
 // Register a new user
 export const registerUser = asyncHandler(async (req, res, next) => {
   const { username, fullName, email, password } = req.body;
+
+  // Validate email format
+  if (!isValidComsatsEmail(email)) {
+    return next(new ApiError(400, 
+      'Invalid email format. Your email should follow this pattern:\n' +
+      'fa##-XXX-###@isbstudent.comsats.edu.pk\n' +
+      'Where:\n' +
+      '- ## is your batch year (e.g., 23)\n' +
+      '- XXX is your department code (e.g., bcs, bse, bce)\n' +
+      '- ### is your roll number (e.g., 047)\n' +
+      'Example: fa23-bcs-047@isbstudent.comsats.edu.pk'
+    ));
+  }
 
   // Check if the user already exists
   const existingUser = await User.findOne({ email });

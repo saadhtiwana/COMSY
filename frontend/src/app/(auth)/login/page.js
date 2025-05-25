@@ -136,11 +136,11 @@ export default function LoginPage() {
             </div>
             
             <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
-              Welcome back
+              Welcome to comsy
             </h1>
             
             <p className="mb-8 text-base text-gray-600">
-              Log in to your account to connect with friends and explore content tailored just for you.
+              The exclusive platform for COMSATS Islamabad students. Connect with your fellow COMSians!
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -170,7 +170,7 @@ export default function LoginPage() {
                     value={formData.email}
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 rounded-lg text-sm focus:ring-2 focus:ring-offset-1 bg-gray-100 border-gray-200 text-gray-900 focus:ring-indigo-500 focus:border-indigo-500"
-                    placeholder="your.email@example.com"
+                    placeholder="fa23-bcs-046@isbstudent.comsats.edu.pk"
                   />
                 </div>
                 {errors.email && (
@@ -258,55 +258,15 @@ export default function LoginPage() {
               </div>
             </form>
             
-            <div className="mt-8">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-200"></div>
-                </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500">
-                    Or continue with
-                  </span>
-                </div>
-              </div>
-              
-              <div className="mt-6 grid grid-cols-3 gap-3">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  type="button"
-                  className="w-full inline-flex justify-center py-3 px-4 rounded-lg shadow-sm bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <FaGoogle className="h-5 w-5 text-red-500" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  type="button"
-                  className="w-full inline-flex justify-center py-3 px-4 rounded-lg shadow-sm bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <FaApple className="h-5 w-5 text-black" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  type="button"
-                  className="w-full inline-flex justify-center py-3 px-4 rounded-lg shadow-sm bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <IoLogoGithub className="h-5 w-5" />
-                </motion.button>
-              </div>
-            </div>
-            
             <p className="mt-8 text-center text-sm text-gray-500">
               Don't have an account?{' '}
               <Link href="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Sign up
+                Sign up with your COMSATS email
               </Link>
             </p>
           </div>
           
-          {/* Right side - Interactive 3D social media visualization */}
+          {/* Right side - Interactive visualization */}
           <div className="w-full lg:w-7/12 relative overflow-hidden bg-indigo-600">
             <div className="absolute inset-0 z-0">
               <svg className="absolute" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -331,8 +291,8 @@ export default function LoginPage() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="text-center mb-12"
                 >
-                  <h2 className="text-3xl font-extrabold mb-4">Connect with the world</h2>
-                  <p className="text-lg opacity-80">Share your moments, discover trending content, engage with your community.</p>
+                  <h2 className="text-3xl font-extrabold mb-4">Connect with COMSATS</h2>
+                  <p className="text-lg opacity-80">Share your campus life, discover fellow students, engage with your university community.</p>
                 </motion.div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -343,8 +303,8 @@ export default function LoginPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                         </svg>
                       ),
-                      title: "Messaging",
-                      description: "Real-time chats with friends and groups"
+                      title: "Campus Chat",
+                      description: "Connect with classmates and department fellows"
                     },
                     {
                       icon: (
@@ -352,8 +312,8 @@ export default function LoginPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                         </svg>
                       ),
-                      title: "Live Video",
-                      description: "Stream your life moments to friends"
+                      title: "Study Groups",
+                      description: "Form study circles and share resources"
                     },
                     {
                       icon: (
@@ -361,8 +321,8 @@ export default function LoginPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                         </svg>
                       ),
-                      title: "Collections",
-                      description: "Organize and share your favorite content"
+                      title: "Events",
+                      description: "Stay updated with campus events and activities"
                     },
                     {
                       icon: (
@@ -370,8 +330,8 @@ export default function LoginPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                         </svg>
                       ),
-                      title: "Global Reach",
-                      description: "Connect with people from around the world"
+                      title: "Department Hub",
+                      description: "Connect within your department community"
                     }
                   ].map((feature, index) => (
                     <motion.div
@@ -401,7 +361,7 @@ export default function LoginPage() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-sm opacity-80">Trusted by 5M+ users worldwide</p>
+                  <p className="text-sm opacity-80">Trusted by 10K+ students at COMSATS Islamabad</p>
                 </motion.div>
               </div>
             </div>
@@ -479,7 +439,7 @@ export default function LoginPage() {
         
         {/* Footer */}
         <div className="mt-8 text-center text-xs text-gray-400">
-          <p>© {new Date().getFullYear()} SocialApp. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} comsy. All rights reserved.</p>
           <div className="mt-2 flex justify-center space-x-4">
             <Link href="/terms" className="hover:underline">Terms</Link>
             <Link href="/privacy" className="hover:underline">Privacy</Link>

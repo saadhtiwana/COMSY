@@ -265,7 +265,7 @@ export default function SignupForm() {
           >
             <div className="space-y-1">
               <h2 className="text-2xl font-bold text-gray-800">How can we reach you?</h2>
-              <p className="text-gray-500">We'll send important updates to this email</p>
+              <p className="text-gray-500">Please use your COMSATS student email</p>
             </div>
 
             <div className="space-y-4">
@@ -278,7 +278,7 @@ export default function SignupForm() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Your email address"
+                    placeholder="fa23-bcs-046@isbstudent.comsats.edu.pk"
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full px-4 py-4 pl-12 bg-transparent border-2 rounded-lg focus:outline-none transition-all ${errors.email
@@ -480,7 +480,7 @@ export default function SignupForm() {
                 <div className="h-10 w-10 bg-blue-500 bg-opacity-20 backdrop-blur-sm rounded-lg flex items-center justify-center">
                   <div className="h-6 w-6 bg-blue-500 rounded-md"></div>
                 </div>
-                <span className="text-2xl font-bold text-blue-600">Connect</span>
+                <span className="text-2xl font-bold text-blue-600">comsy</span>
               </div>
             </Link>
 
@@ -491,10 +491,10 @@ export default function SignupForm() {
               className="max-w-md"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-gray-800">
-                Start connecting with your world
+                Join COMSATS Community
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                Join millions of others in sharing photos, chatting with friends, and discovering what's trending right now.
+                Connect with your fellow students, share resources, and stay updated with campus life at COMSATS Islamabad.
               </p>
             </motion.div>
           </div>
@@ -569,37 +569,6 @@ export default function SignupForm() {
             </div>
 
             <div className="mt-8 pt-6 border-t border-gray-200">
-              <div className="flex items-center justify-center space-x-6 mb-6">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-red-50 hover:bg-red-100 transition-colors"
-                >
-                  <FaGoogle className="text-red-600" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 hover:bg-blue-100 transition-colors"
-                >
-                  <FaFacebookF className="text-blue-600" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-sky-50 hover:bg-sky-100 transition-colors"
-                >
-                  <FaTwitter className="text-sky-500" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors"
-                >
-                  <FaApple className="text-gray-800" />
-                </motion.button>
-              </div>
-
               <p className="text-center text-sm text-gray-500">
                 By signing up, you agree to our{" "}
                 <Link href="/terms" className="text-blue-600 hover:text-blue-700 transition-colors">

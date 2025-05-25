@@ -97,7 +97,9 @@ const Header = ({ toggleSidebar }) => {
                     }}
                   />
                 </motion.div>
-                <span className="font-bold text-lg bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-indigo-600 transition-all duration-500">Rehman</span>
+                <span className="font-bold text-lg bg-gradient-to-r from-blue-800 to-blue-900 bg-clip-text text-transparent group-hover:from-blue-900 group-hover:to-blue-800 transition-all duration-500">
+  comsy
+</span>
               </div>
 
               <nav className="hidden lg:flex ml-3">
